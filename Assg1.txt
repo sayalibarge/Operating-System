@@ -1,0 +1,530 @@
+
+
+                  SECTION A
+*************************************************
+1>Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+a)date
+%a  : locale's abbreviated weekday name (e.g., Sun)
+
+		%A  :locale's full weekday name (e.g., Sunday)
+
+		%b  :locale's abbreviated month name (e.g., Jan)
+
+		%B  :locale's full month name (e.g., January)
+
+		%c  :locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+
+		%C  :century; like %Y, except omit last two digits (e.g., 20)
+
+		%d  :day of month (e.g., 01)
+
+		%D  :date; same as %m/%d/%y
+
+		%e  :day of month, space padded; same as %_d
+
+		%F  :full date; same as %Y\-%m\-%d
+
+		%g  :last two digits of year of ISO week number (see %G)
+
+		%G  :year of ISO week number (see %V); normally useful only with %V
+
+		%h  :same as %b
+
+		%H  :hour (00..23)
+
+		%I  :hour (01..12)
+
+		%j  :day of year (001..366)
+		 
+		%k  :hour, space padded ( 0..23); same as %_H
+
+		%l  :hour, space padded ( 1..12); same as %_I
+
+		%m  :month (01..12)
+
+		%M  :minute (00..59)
+
+		%n  :a newline
+		  
+		%N  :nanoseconds (000000000..999999999)
+		    
+		%p  :locale's equivalent of either AM or PM; blank if not known
+
+		%P  :like %p, but lower case
+
+		%r  :locale's 12\-hour clock time (e.g., 11:11:04 PM)
+
+		%R  :24\-hour hour and minute; same as %H:%M
+
+		%s  :seconds since 1970\-01\-01 00:00:00 UTC
+
+		%S  :second (00..60)
+
+		%t  :a tab
+
+		%T  :time; same as %H:%M:%S
+
+		%u  :day of week (1..7); 1 is Monday
+
+		%U  :week number of year, with Sunday as first day of week (00..53)
+
+		%V  :ISO week number, with Monday as first day of week (01..53)
+		 
+		%w  :day of week (0..6); 0 is Sunday
+
+		%W  :week number of year, with Monday as first day of week (00..53)
+		 
+		%x  :locale's date representation (e.g., 12/31/99)
+		 
+		%X  :locale's time representation (e.g., 23:13:48)
+		 
+		%y  :last two digits of year (00..99)
+
+		%Y  :year
+
+		%z  :+hhmm numeric time zone (e.g., \fB\-0400\fR)
+		 
+		%:z+hh:mm numeric time zone (e.g., \fB\-04\fR:00)
+
+		%::z+hh:mm:ss numeric time zone (e.g., \fB\-04\fR:00:00)
+
+		%:::z numeric time zone with : to necessary precision (e.g., \fB\-04\fR, +05:30)
+
+		%Z  :alphabetic time zone abbreviation (e.g., EDT)
+
+
+===========================================================
+b)cal
+sayu@DESKTOP-9I9VJ4O:~$ cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+==================================================================
+c)bc
+sayu@DESKTOP-9I9VJ4O:~$ bc
+bc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+==================================================================
+d)echo
+sayu@DESKTOP-9I9VJ4O:~$ echo sayali
+sayali
+===================================================================
+e)who
+sayu@DESKTOP-9I9VJ4O:~$ who
+==================================================================
+f)whoami
+sayu@DESKTOP-9I9VJ4O:~$ whoami
+sayu
+=======================================================================
+g)logname
+sayu@DESKTOP-9I9VJ4O:~$ logname
+logname: no login name
+========================================================================
+h)uname
+sayu@DESKTOP-9I9VJ4O:~$ uname
+Linux
+**********************************************************
+
+2>
+  A)A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+
+ANS-->
+  sayu@DESKTOP-9I9VJ4O:~$ mkdir a
+sayu@DESKTOP-9I9VJ4O:~$ mkdir b
+sayu@DESKTOP-9I9VJ4O:~$ mkdir c
+sayu@DESKTOP-9I9VJ4O:~$ cd a
+sayu@DESKTOP-9I9VJ4O:~/a$ touch a.txt
+sayu@DESKTOP-9I9VJ4O:~/a$ cd ..
+sayu@DESKTOP-9I9VJ4O:~$ cd b
+sayu@DESKTOP-9I9VJ4O:~/b$ touch b.txt
+sayu@DESKTOP-9I9VJ4O:~/b$ cd ..
+sayu@DESKTOP-9I9VJ4O:~$ cd c
+sayu@DESKTOP-9I9VJ4O:~/c$ touch c.txt   
+sayu@DESKTOP-9I9VJ4O:~/c$ cd ..
+sayu@DESKTOP-9I9VJ4O:~$ cp -r c a
+sayu@DESKTOP-9I9VJ4O:~$ ls
+a  b  c
+sayu@DESKTOP-9I9VJ4O:~$ cd a
+sayu@DESKTOP-9I9VJ4O:~/a$ ls
+a.txt  c
+
+-------------------------------------------------
+
+B)Move Directory b to c.
+ANS-->
+
+sayu@DESKTOP-9I9VJ4O:~$ mv b c
+sayu@DESKTOP-9I9VJ4O:~$ cd c
+sayu@DESKTOP-9I9VJ4O:~/c$ ls
+b  c.txt
+sayu@DESKTOP-9I9VJ4O:~/c$
+------------------------------------------------------
+C)Create alias of ls -lh command to your name.
+ANS-->
+
+ alias sayali="ls-lh"
+
+------------------------------------------------------
+D)Change Directory name a to cdac.
+
+sayu@DESKTOP-9I9VJ4O:~$ mv a cdac
+sayu@DESKTOP-9I9VJ4O:~$ ls
+c  cdac
+sayu@DESKTOP-9I9VJ4O:~$ ls
+c  cdac
+
+*********************************************************
+
+3>
+ A) Create five files file1.txt , file2.txt,file3.txt file4.txt      
+ and file5.txt with some text inside it. Search for 's'character inside all the files using grep command.
+       Also Use cat to view all file content together.
+
+ANS-->
+
+sayu@DESKTOP-9I9VJ4O:~$ cat >f1.txt
+sayali
+sayu@DESKTOP-9I9VJ4O:~$ cat >f2.txt
+shivani
+sayu@DESKTOP-9I9VJ4O:~$ cat >f3.txt
+prachi
+sayu@DESKTOP-9I9VJ4O:~$ cat >f4.txt
+nidhi
+sayu@DESKTOP-9I9VJ4O:~$ cat >f5.txt
+shubham
+sayu@DESKTOP-9I9VJ4O:~$ ls
+c  cdac  f1.txt  f2.txt  f3.txt  f4.txt  f5.txt
+sayu@DESKTOP-9I9VJ4O:~$ grep "s" *.txt
+f1.txt:sayali
+f1.txt:sayali
+f1.txt:shubham
+f2.txt:shivani
+f5.txt:shubham
+file.txt:sayu shubham
+
+sayu@DESKTOP-9I9VJ4O:~$ cat f1.txt f2.txt f3.txt  f4.txt f5.txt
+
+---------------------------------------------------------------
+B)Create file.txt using cat and edit that using  nano editor.
+ANS-->
+sayu@DESKTOP-9I9VJ4O:~$ cat >file.txt
+sayu shubham
+sayu@DESKTOP-9I9VJ4O:~$ nano file.txt
+-------------------------------------------------------------
+C)Create 5 empty files using touch command
+
+ANS-->
+
+sayu@DESKTOP-9I9VJ4O:~$ touch s1.txt
+sayu@DESKTOP-9I9VJ4O:~$ touch s2.txt
+sayu@DESKTOP-9I9VJ4O:~$ touch s3.txt
+sayu@DESKTOP-9I9VJ4O:~$ touch s4.txt
+sayu@DESKTOP-9I9VJ4O:~$ touch s5.txt
+
+--------------------------------------------------------------
+D)Remove previously created directory a , b and c.
+
+ANS-->
+
+sayu@DESKTOP-9I9VJ4O:~$ rm -r c
+sayu@DESKTOP-9I9VJ4O:~$ ls
+cdac    f2.txt  f4.txt  file.txt  s2.txt  s4.txt
+f1.txt  f3.txt  f5.txt  s1.txt    s3.txt  s5.txt
+sayu@DESKTOP-9I9VJ4O:~$ rm -r cdac
+sayu@DESKTOP-9I9VJ4O:~$ ls
+f1.txt  f3.txt  f5.txt    s1.txt  s3.txt  s5.txt
+f2.txt  f4.txt  file.txt  s2.txt  s4.txt
+
+
+******************************************************
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+
+   ANS-->
+        sayu@DESKTOP-9I9VJ4O:~$ cat f1.txt
+           sayali
+------------------------------------------
+      b) Display line numbers along with content
+     ANS-->   sayu@DESKTOP-9I9VJ4O:~$ cat -n  f1.txt
+          1  sayali
+-------------------------------------------------
+      c) Display the file in reverse order using tac
+cat
+ANS-->
+sayu@DESKTOP-9I9VJ4O:~$ cat >>f1.txt
+sayali
+shubham
+sayu@DESKTOP-9I9VJ4O:~$ tac f1.txt
+shubham
+sayali
+sayali
+----------------------------------------------
+      d) Combine multiple files using cat command
+sayu@DESKTOP-9I9VJ4O:~$ cat f1.txt f2.txt f3.txt
+sayali
+sayali
+shubham
+shivani
+prachi
+
+*****************************************************
+
+5> Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+         Ans-->
+          ls ->to display the files row wise
+	  ls -l->to display the files column wise
+
+---------------------------------------------------------
+	b) sort the files in ascending, descending order
+
+ANS-->
+        ls ->to sort files in ascending order
+        ls -r->to sort files in descending 
+
+
+------------------------------------------------------
+	c) Create some hidden files and sub directories        and display them using “ls -a”
+
+ANS-->
+
+touch .hiddenfile.txt and mkdir .hidden_directory
+ls -a (To see hidden files )
+
+---------------------------------------------------------	
+      d) Change time stamp of some files and directories      using touch command and display the files using ls -t       ls -rt
+
+
+ANS-->
+– touch -m Sayali (To change file timestamp at current timestamp)
+--------------------------------------------------------
+	e) Recursive display contents of your home directory.
+
+       ANS-->
+sayu@DESKTOP-9I9VJ4O:~$ ls -R
+.:
+a1  f1.txt  f3.txt  f5.txt    que5  s1.txt  s2.txt  s4.txt
+a2  f2.txt  f4.txt  file.txt  s1    s2      s3.txt  s5.txt
+
+./que5:
+a1.txt  a2.txt
+
+./s1:
+
+./s2:
+-----------------------------------------------------
+
+f) display all attributes of files and directories using ls 
+
+
+	ANS--> ls -la
+
+-----------------------------------------------------
+g) display attributes of a directory using ls -ld
+
+ANS-->
+
+ls -ld
+
+
+***************************************************************
+
+               SECTION B
+
+Q1. Create directory of your name and then create 4 files inside it named .txt, b.txt, c.txt and d.sh. And change the directory permission to only user and also files permission to only user such that
+	a)user can read and write the file a.txt and b.txt
+	-->
+		chmod u+rw a.txt b.txt
+------------------------------------------------
+		b)user can write the file c.txt
+       -->
+		 chmod u+w c.txt
+----------------------------------------------------
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+       -->
+                 > chmod u+x d.sh
+		> vi d.sh
+		> bash d.sh
+
+
+       
+*******************************************************
+Q2. Change the permission of the previous directory to executable only.Analyze the output.
+
+-->
+    chmod a+x ../
+*****************************************************
+Q3. Change the permission of the previous directory to read only.Analyze the output.
+
+-->
+    chmod a+r ../
+*******************************************************
+Q4. Use echo to list the all files of your home directory.
+
+-->
+    echo *
+*******************************************************
+Q5. Use echo to list the all files of /etc/ directory
+
+-->
+    echo */*
+**************************************************************
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+
+-->
+    echo *.confs
+***************************************************************
+Q7. Use echo to append your name to a.txt
+
+-->
+     echo "SAYAL" >> a.txt
+**************************************************************8
+               SECTION C
+
+1>Create Three level nested directory a,b and c
+a)Create at least one hidden file in each directory
+-->
+ mkdir -p a/b/c
+====================================================
+b)Create at least one normal text file in each directory
+-->
+touch a/.hidden_file.txt a/b/.hidden.txt a/b/c/.hiddenfiles.txt
+========================================================
+c)Copy c into a
+-->
+   cp -r b/c ./
+
+=======================================================
+d)Copy file inside a into b
+
+cp file a.txt b/
+----------------------------------------------------
+2.	Change the third level directory c permission to read         only
+
+-->
+  chmod u+r c
+---------------------------------------------------------------
+3.	Try copying third level c directory to outside of a
+--> cp b/c ../
+---------------------------------------------------------
+4.	Create the directory  “data“ inside b
+ -->
+   mkdir b/data
+-------------------------------------------------------
+5.	Change the permission of b to read and write only
+-->
+ chmod u+rw b
+-------------------------------------------------------------
+6.	Create directory “data2”  inside b
+-->
+     mkdir b/data2
+-------------------------------------------------------
+7.	Create data.txt file inside b
+-->
+   touch b/data.txt
+
+-----------------------------------------------------
+8.	Rename the second level directory c to copied_dir
+
+-->
+ mv c copied_dir
+-----------------------------------------------
+9.	Change permission of copied_dir to only executable
+-->
+ chmod u+x copied_dir
+--------------------------------------------------------------
+10.	Try ls on copied_dir
+
+-->
+      ls cannot run because of executable only cannot read
+-------------------------------------------------------------
+11.	Try moving copied_dir to outside of a
+
+-->
+    cannot move copied_dir to outside because of restriced     permissions
+
+-----------------------------------------------------------
+12.	Try moving data directory outside of a
+-->
+       cannot move dir to outside because of restriced        permissions
+-------------------------------------------------------------
+13.	Now change the owner of the directory a to root
+-->
+     sudo chown root a
+--------------------------------------------------------------
+14.	Change permission of a to read write and executable to        only user
+
+-->   sudo chown root a
+-------------------------------------------------------------
+15.	Try creating directory sample inside a
+
+-->   mkdir a/d
+----------------------------------------------------------------
+16.	Create directory x outside a
+-->
+    mkdir ../x
+----------------------------------------------------------------
+17.	Try moving x inside a
+-->
+   mv x ./a
+---------------------------------------------------------------
+
+18.	Create directory movies
+-->
+     mkdir movies
+
+----------------------------------------------------------------
+19.	Change group of movies to sudo
+
+-->sudo usermod -aG sudo newuser
+----------------------------------------------------------------
+20.	Change group of movies to avahi
+-->
+     chgrp scifi myfile
+	
+	  ls -l myfile
+
+---------------------------------------------------------------
+21.	Try changing permission after changing ownership to root
+
+-->
+    sudo chmod --recursive a+rwx /tmp
+-------------------------------------------------------------
+22.	Try Changing permission after changing group to sudo without sudo
+-->
+      pkexec chmod go-w /usr/lib/sudo/sudoers.so
+-----------------------------------------------------------------------
+23.	Try Changing owner and group both to root
+
+-->
+        sudo chown -R username:group directory
+---------------------------------------------------------------------
+24.	Try changinging permission
+
+-->
+    sudo usermod -aG sudo newuser
+---------------------------------------------------------------------
+25.	Try deleting the file
+-->
+      rm -rf a.txt
+
+
+*****************************************************************
+
+	
+	
+
+                                            
